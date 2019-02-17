@@ -1,13 +1,9 @@
 def possible_triple(user_input):
-    a = list(range(1, user_input - 2))
-    b = list(range(1, user_input - 2))
-    c = list(range(1, user_input - 2))
-
     possible_triple_list = []
 
-    for i in a:
-        for j in b:
-            for k in c:
+    for i in range(1, user_input -2):
+        for j in range(1, user_input -2):
+            for k in range(1, user_input -2):
                 if (i + j + k == user_input) and (k > i) and (k > j) and (i != j):
                     temp_list = [i, j, k]
                     possible_triple_list.append(temp_list)
